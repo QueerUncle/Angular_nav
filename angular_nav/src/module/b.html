@@ -1,0 +1,19 @@
+<!--
+*   project:
+*   site:cbim,
+*   author：lize,
+*   time:2017/7/11
+-->
+<div class="container">
+    <h1 class="header">angular-waterfall（瀑布流+滚动条监控加载更多）</h1>
+
+    <ul class="waterfall-list" ng-waterfall cols="5">
+        <li ng-repeat="image in images" repeat-finished ng-click = "moverover(image.id)">
+            <div class="data-block">
+                <img src="{{image.url}}" alt="{{image.summary}}" title="{{image.title }}"/>
+                <p>{{image.summary}}</p>
+            </div>
+        </li>
+        <div class="loadMore" ng-if="loadMore" ng-infinite-scroll ng-click="loadMoreData()">{{text}}</div>
+    </ul>
+</div>

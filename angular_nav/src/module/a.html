@@ -1,0 +1,27 @@
+<!--
+*   project:
+*   site:cbim,
+*   author：lize,
+*   time:2017/7/11
+-->
+<div>
+    <button ng-click="getChecked()">查看</button>
+    <input type='checkbox' ng-model="selectAll" ng-click = 'checedAll()' ng-checked ='select' >全选、反选
+</div>
+<table>
+    <thead style = "background:greenyellow;" >
+    <tr>
+        <th ng-repeat=" i in heades " width="200" style="text-align: center">{{ i }}</th>
+    </tr>
+    </thead>
+    <tbody style = "background: darkkhaki">
+    <tr ng-repeat=" j in lists " style="text-align: center;">
+        <td>
+            <input type="checkbox" ng-checked="selectAll" ng-click = 'funCheck()' ng-model="j.isSelected"/>
+        </td>
+        <td>{{j.name}}</td>
+        <td>{{j.birthday}}</td>
+        <td>{{j.age}}</td>
+    </tr>
+    </tbody>
+</table>

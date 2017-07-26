@@ -1,0 +1,19 @@
+<!--
+*   project:
+*   site:cbim,
+*   author：lize,
+*   time:2017/7/11
+-->
+<ul class="oul">
+    <!--<li ng-repeat="i in data"  class = "bigli" >{{i.con}}-->
+        <!--<ul style = "display:none" >-->
+            <!--<li ng-repeat="j in i.lists" >{{j.id}}</li>-->
+        <!--</ul>-->
+    <!--</li>-->
+    <accordion>
+        <expander class='expander' ng-repeat='expander in expanders'  expander-title='expander.con'>
+            <!--{{expander.lists}}-->
+            <li ng-repeat = "x in expander.lists " ui-sref={{'.'+x.sref}} ng-click = addStyle(); class = "actives">{{x.id}}</li>
+        </expander>
+    </accordion>
+</ul>
